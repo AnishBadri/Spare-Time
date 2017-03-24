@@ -28,10 +28,10 @@ def checkstate(game =[], *args):
 
 gamenumber = int(sys.stdin.readline())
 gamedata = []
-for game in range(gamenumber):
+for game in range(1,gamenumber+1):
     gamedata = [sys.stdin.readline().strip()for i in range(4) ]
     state = checkstate(gamedata)
-    print("Case # " +str(game+1))
+    print("Case # " +str(game))
     if(state in ['x','o']):
         print(state+" Won")
     if(state == 'Draw' ):

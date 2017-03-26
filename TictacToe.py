@@ -2,11 +2,11 @@ from _ast import In
 import sys
 
 def checkstate(game =[], *args):
-  for da in ['x','o']:
+  for da in ['X','O']:
+      hor = True
+      ver = True
+      dia = True
       for i in range(4):
-          hor = True
-          ver = True
-          dia = True
           for j in range(4):
               if(game[i][j] == da or game[i][j] == 'T'):
                   hor = False
@@ -31,8 +31,8 @@ gamedata = []
 for game in range(1,gamenumber+1):
     gamedata = [sys.stdin.readline().strip()for i in range(4) ]
     state = checkstate(gamedata)
-    print("Case # " +str(game))
-    if(state in ['x','o']):
+    print("Case #" +str(game) +":")
+    if(state in ['X','O']):
         print(state+" Won")
     if(state == 'Draw' ):
         print(state)

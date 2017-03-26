@@ -18,7 +18,6 @@ def NumberSeperator(n):
             copy=int(copy/10)
             if(Checkarray(numberarr)):
                 return final
-        # print(numberarr)
 
 
 def Checkarray(numberarr):
